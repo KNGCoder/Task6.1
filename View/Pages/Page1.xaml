@@ -1,0 +1,53 @@
+﻿<Page x:Class="Task6._1.View.Pages.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:Task6._1.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      FontFamily="Comic Sans MS">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="1"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="345"
+                Height="385"
+                CornerRadius="35"
+                BorderBrush="#a4c8e0"
+                BorderThickness="2"
+                Background="#e7ffff">
+            <Grid>
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Top">
+                    <StackPanel Margin="0 30 0 0">
+                        <TextBlock FontSize="21"
+                                   FontWeight="SemiBold">
+                            <Run Text="Практическая работа №6"
+                                 Foreground="#003166"/>
+                        </TextBlock>
+                        <TextBlock Text="Работа с SQLite"
+                                   TextAlignment="Center"
+                                   FontWeight="Regular"
+                                   FontSize="15"
+                                   Foreground="#003d6e"/>
+                        <materialDesign:PackIcon Kind="Database"
+                                                 Margin="0 15 0 0"
+                                                 HorizontalAlignment="Center"
+                                                 VerticalAlignment="Center"
+                                                 Foreground="#003d6e"
+                                                 Height="100"
+                                                 Width="90"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            
+        </Border>
+    </Grid>
+</Page>

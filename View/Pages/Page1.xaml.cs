@@ -24,5 +24,15 @@ namespace Task6._1.View.Pages
         {
             InitializeComponent();
         }
+
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnRegistration_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

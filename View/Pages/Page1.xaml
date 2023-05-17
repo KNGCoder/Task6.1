@@ -6,7 +6,7 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:Task6._1.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="550" d:DesignWidth="800"
+      d:DesignHeight="400" d:DesignWidth="600"
       FontFamily="Comic Sans MS">
 
     <Grid>
@@ -17,8 +17,8 @@
         <Border Grid.Column="1"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
-                Width="345"
-                Height="385"
+                Width="245"
+                Height="255"
                 CornerRadius="35"
                 BorderBrush="#a4c8e0"
                 BorderThickness="2"
@@ -26,8 +26,8 @@
             <Grid>
                 <StackPanel HorizontalAlignment="Center"
                             VerticalAlignment="Top">
-                    <StackPanel Margin="0 30 0 0">
-                        <TextBlock FontSize="21"
+                    <StackPanel Margin=  "10 20 0 0">
+                        <TextBlock FontSize="17"
                                    FontWeight="SemiBold">
                             <Run Text="Практическая работа №6"
                                  Foreground="#003166"/>
@@ -35,19 +35,105 @@
                         <TextBlock Text="Работа с SQLite"
                                    TextAlignment="Center"
                                    FontWeight="Regular"
-                                   FontSize="15"
+                                   FontSize="10"
                                    Foreground="#003d6e"/>
                         <materialDesign:PackIcon Kind="Database"
-                                                 Margin="0 15 0 0"
+                                                 Margin="0 10 0 0"
                                                  HorizontalAlignment="Center"
                                                  VerticalAlignment="Center"
                                                  Foreground="#003d6e"
-                                                 Height="100"
-                                                 Width="90"/>
+                                                 Height="40"
+                                                 Width="50"/>
                     </StackPanel>
                 </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="30,130,20,105">
+                    <materialDesign:PackIcon x:Name="Icon1"
+                                             Kind="Email"
+                                             Width="15"
+                                             Height="15"
+                                             />
+                    <TextBox Width="150"
+                             Margin="10 ,0,0,0"
+                             x:Name="TbLogin"
+                             FontWeight="Regular"
+                             Foreground="#003d6e"
+                             FontSize="8"
+                             Text="Введите адрес электронной почты"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:TextFieldAssist.UnderlineBrush="#a4c8e0"
+                             Height="15"/>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="30,165,20,70">
+                    <materialDesign:PackIcon x:Name="Icon2"
+                                             Kind="Password"
+                                             Width="15"
+                                             Height="15"
+                                             />
+                    <TextBox Width="150"
+                             Margin="10 ,0,0,0"
+                             x:Name="PbPassword"
+                             FontWeight="Regular"
+                             Foreground="#003d6e"
+                             FontSize="8"
+                             Text="Введите пароль"
+                             materialDesign:TextFieldAssist.HasClearButton="True"
+                             materialDesign:TextFieldAssist.UnderlineBrush="#a4c8e0"
+                             Height="15"/>
+
+                </StackPanel>
+
+                <StackPanel Margin="0 160 0 0"
+                            Orientation="Horizontal">
+                    <Button Width="70" Height="25"
+                            Margin="20 0 20 0 "
+                            x:Name="BtnLogin"
+                            Click="BtnLogin_Click"
+                            Background="#003d6e"
+                            BorderBrush="#003d6e"
+                            Foreground="#e7ffff"
+                            materialDesign:ButtonProgressAssist.Value="-1"
+                            materialDesign:ButtonProgressAssist.IndicatorForeground="#a4c8e0"
+                            materialDesign:ButtonProgressAssist.IndicatorBackground="Transparent"
+                            materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                            materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                            IsEnabled="{Binding DataContext.ControlEnabled, 
+                            RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="LoginVariant"
+                                                     Margin="0 0 3 0 "
+                                                     />
+                            <TextBlock Text=" Войти "
+                                       FontSize="9" />
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button Width="110"  Height="25"
+                            x:Name="BtnRegistration"
+                            Click="BtnRegistration_Click"
+                            Background="#e7ffff"
+                            BorderBrush="#003d6e"
+                            Foreground="#003d6e"
+                            materialDesign:ButtonProgressAssist.Value="-1"
+                            materialDesign:ButtonProgressAssist.IndicatorForeground="#a4c8e0"
+                            materialDesign:ButtonProgressAssist.IndicatorBackground="Transparent"
+                            materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                            materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                            IsEnabled="{Binding DataContext.ControlEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Terrain"
+                                                     Margin="0 0 3 0 "/>
+                            <TextBlock Text=" Создать аккаунт"
+                                        FontSize="9"/>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
             </Grid>
-            
+
         </Border>
     </Grid>
 </Page>

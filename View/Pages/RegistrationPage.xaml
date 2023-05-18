@@ -1,4 +1,4 @@
-﻿<Page x:Class="Task6._1.View.Pages.Page1"
+﻿<Page x:Class="Task6._1.View.Pages.RegistrationPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:Task6._1.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="400" d:DesignWidth="600"
+      d:DesignHeight="600" d:DesignWidth="800"
       FontFamily="Comic Sans MS">
 
     <Grid>
@@ -56,8 +56,8 @@
                                              />
                     <TextBox Width="150"
                              Margin="10 ,0,0,0"
-                             x:Name="TbLogin.1"
                              FontWeight="Regular"
+                             x:Name="TbLogin"
                              Foreground="#003d6e"
                              FontSize="8"
                              Text="Введите адрес электронной почты"
@@ -69,15 +69,15 @@
 
                 <StackPanel Orientation="Horizontal"
                             Margin="30,165,20,70">
-                    <materialDesign:PackIcon x:Name="Icon2.1"
+                    <materialDesign:PackIcon 
                                              Kind="Password"
                                              Width="15"
                                              Height="15"
                                              />
                     <TextBox Width="150"
                              Margin="10 ,0,0,0"
-                             x:Name="PbPassword.1"
                              FontWeight="Regular"
+                             x:Name="PbPassword"
                              Foreground="#003d6e"
                              FontSize="8"
                              Text="Введите пароль"
@@ -89,10 +89,10 @@
 
                 <StackPanel Margin="0 160 0 0"
                             Orientation="Horizontal">
-                    <Button Width="70" Height="25"
+                    <Button Width="110" Height="25"
                             Margin="20 0 20 0 "
                             x:Name="BtnCreat"
-                            Click=""
+                            Click="BtnCreat_Click"
                             Background="#003d6e"
                             BorderBrush="#003d6e"
                             Foreground="#e7ffff"
@@ -104,17 +104,17 @@
                             IsEnabled="{Binding DataContext.ControlEnabled, 
                             RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="LoginVariant"
+                            <materialDesign:PackIcon Kind="Create"
                                                      Margin="0 0 3 0 "
                                                      />
-                            <TextBlock Text=" Войти "
+                            <TextBlock Text="Создать аккаунт"
                                        FontSize="9" />
                         </StackPanel>
                     </Button>
 
-                    <Button Width="110"  Height="25"
+                    <Button Width="80"  Height="25"
                             x:Name="BtnBack"
-                            Click=""
+                            Click="BtnBack_Click"
                             Background="#e7ffff"
                             BorderBrush="#003d6e"
                             Foreground="#003d6e"
@@ -125,9 +125,9 @@
                             materialDesign:ButtonProgressAssist.IsIndeterminate="True"
                             IsEnabled="{Binding DataContext.ControlEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Terrain"
+                            <materialDesign:PackIcon Kind="SpyOff"
                                                      Margin="0 0 3 0 "/>
-                            <TextBlock Text=" Создать аккаунт"
+                            <TextBlock Text="Или войти"
                                         FontSize="9"/>
                         </StackPanel>
                     </Button>

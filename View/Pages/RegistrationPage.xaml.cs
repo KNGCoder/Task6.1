@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Task6._1.Core;
 using Task6._1.Model;
 
 namespace Task6._1.View.Pages
@@ -30,6 +31,14 @@ namespace Task6._1.View.Pages
             _db = new ModelContext();
         }
 
+        private void BtnCreat_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(TbLogin.Text) || string.IsNullOrEmpty(PbPassword.Text));
+        }
 
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            Util.UtilFrame?.Navigate(new Page1());
+        }
     }
 }

@@ -11,20 +11,14 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
-        Title="MainWindow" Height="400" Width="600">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
-        <Image Source="/Img/003.jpg" 
+       
+        <Image Source="/Img/002.jpg" 
                Grid.Column="0" 
                Stretch="UniformToFill"/>
            
-        <Border Grid.Column="1"
-                Background="#007fe3">
-            
-        </Border>
+       
             
         <Grid MouseDown="Grid_MouseDown">
             <Frame x:Name="MainFrame"

@@ -15,10 +15,10 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Border Grid.Column="0"
-                HorizontalAlignment="Left"
+                HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Width="245"
-                Height="255"
+                Height="285"
                 CornerRadius="35"
                 BorderBrush="#a4c8e0"
                 BorderThickness="2"
@@ -48,7 +48,7 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal"
-                            Margin="30,130,20,105">
+                            Margin="30,130,20,133">
                     <materialDesign:PackIcon x:Name="Icon1I"
                                              Kind="Email"
                                              Width="15"
@@ -68,7 +68,7 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal"
-                            Margin="30,165,20,70">
+                            Margin="30,165,20,100">
                     <materialDesign:PackIcon 
                                              Kind="Password"
                                              Width="15"
@@ -90,7 +90,7 @@
                 <StackPanel Margin="0 160 0 0"
                             Orientation="Horizontal">
                     <Button Width="110" Height="25"
-                            Margin="20 0 20 0 "
+                            Margin="20 0 10 0 "
                             x:Name="BtnCreat"
                             Click="BtnCreat_Click"
                             Background="#003d6e"
